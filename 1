@@ -1,0 +1,17 @@
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        int[] table = { 1, 8, 5, -1, 10, 2 };
+        int max = table[0];
+        foreach(int row in table)
+        {
+            if(row > max)
+            {
+                max = row;
+            }
+        }
+        Console.WriteLine(max);
+    }
+
+}
