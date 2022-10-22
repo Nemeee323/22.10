@@ -1,0 +1,56 @@
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        
+        static void printtable(int[] tablica)
+        {
+            string tab = "[";
+            for(int i = 0; i < tablica.Length; i++)
+            {
+               tab += tablica[i];
+                if(i < tablica.Length - 1)
+                {
+                    tab += ",";
+                }
+
+            }
+            tab += "]";
+            Console.WriteLine(tab);
+        }
+       
+        static int[] sorttable(int[] table)
+        {
+            for(int i = 0; i < table.Length - 1; i++)
+            {
+                int ele1 = table[i];
+                int ele2 = table[i + 1];
+                if(ele2 > ele1)
+                {
+                    table[i] = ele2;
+                    table[i + 1] = ele1;   
+                }
+            }
+            return table;
+        }
+        static void Main(string[] args)
+        {
+            int[] table = { 1, 8, 5, -1, 10, 2 };
+            printtable(table);
+            int[] posortowana = sorttable(table);
+            printtable(table);
+            int[] posortowana2 = sorttable(table);
+            printtable(table);
+            int[] posortowana3 = sorttable(table);
+            printtable(table);
+            int[] posortowana4 = sorttable(table);
+            printtable(table);
+            int[] posortowana5 = sorttable(table);
+            printtable(table);
+
+
+
+        }
+
+    }
+}
