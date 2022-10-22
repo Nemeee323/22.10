@@ -1,0 +1,67 @@
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void zad_8_2_1()
+        {
+            Console.WriteLine("podaj 5 liczb");
+            int n = 5;
+            int[] tab = new int[n];
+            for(int i = 0; i < n; i++)
+            {
+                Console.WriteLine("podaj liczbe: ");
+                int liczba = int.Parse(Console.ReadLine());
+                tab[i] = liczba;
+            }
+            int max = tab[0];
+            foreach (int row in tab)
+            {
+                if (row > max)
+                {
+                    max = row;
+                }
+            }
+            Console.WriteLine(max);
+        }
+
+        static void printtable(int[] tablica)
+        {
+            string tab = "[";
+            for (int i = 0; i < tablica.Length; i++)
+            {
+                tab += tablica[i];
+                if (i < tablica.Length - 1)
+                {
+                    tab += ",";
+                }
+
+            }
+            tab += "]";
+            Console.WriteLine(tab);
+        }
+
+        static int[] sorttable(int[] table)
+        {
+            for (int i = 0; i < table.Length - 1; i++)
+            {
+                int ele1 = table[i];
+                int ele2 = table[i + 1];
+                if (ele2 > ele1)
+                {
+                    table[i] = ele2;
+                    table[i + 1] = ele1;
+                }
+            }
+            return table;
+        }
+        static void Main(string[] args)
+        {
+            zad_8_2_1();
+            
+        }
+
+
+
+    }
+
+    }
